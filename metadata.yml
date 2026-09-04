@@ -1,19 +1,17 @@
 Identifier: eos9q2i
 Slug: mol-jepa
 Status: In progress
-Title: Mol-JEPA
+Title: Mol-JEPA A multimodal Joint Embedding Predictive Architecture for Molecules
 Description: Multimodal joint-embedding predictive architecture that turns a 
   SMILES string into a 512-dimensional embedding carrying predicted biological, 
   phenotypic and quantum context, pretrained by modality masking over 4.69 M 
   compounds.
 Deployment:
   - Local
-  - Online
-Source: Local, Online
-Source Type: Internal, Replicated, External
-Task: Annotation, Representation, Sampling
-Subtask: Property calculation or prediction, Activity prediction, Featurization,
-  Projection, Similarity search, Generation
+Source: Local
+Source Type: External
+Task: Representation
+Subtask: Featurization
 Input:
   - Compound
 Input Dimension: 1
@@ -22,21 +20,19 @@ Output:
   - Score
   - Compound
   - Text
-Output Dimension: 1
-Output Consistency: Fixed, Variable
+Output Dimension: 512
+Output Consistency: Fixed
 Interpretation: The output of this template model should be interpreted like 
   this.
 Tag:
   - Embedding
 Biomedical Area:
-  - Biomedical Area 1
-  - Biomedical Area 2
+  - Any
 Target Organism:
-  - Target Organism 1
-  - Target Organism 2
+  - Any
 Publication Type: Peer reviewed, Preprint, Other
 Publication Year: 2026
 Publication: https://arxiv.org/abs/2608.22642
 Source Code: https://github.com/Boehringer-Ingelheim/mol-jepa
 License: CC-BY-4.0
-Contributor: arnaucoma24
+Contributor: soufianeaatab
