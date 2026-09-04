@@ -17,9 +17,6 @@ Input:
 Input Dimension: 1
 Output:
   - Value
-  - Score
-  - Compound
-  - Text
 Output Dimension: 512
 Output Consistency: Fixed
 Interpretation: The output of this template model should be interpreted like 
@@ -30,7 +27,7 @@ Biomedical Area:
   - Any
 Target Organism:
   - Any
-Publication Type: Peer reviewed, Preprint, Other
+Publication Type: Preprint
 Publication Year: 2026
 Publication: https://arxiv.org/abs/2608.22642
 Source Code: https://github.com/Boehringer-Ingelheim/mol-jepa
