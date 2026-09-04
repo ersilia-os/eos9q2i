@@ -1,6 +1,6 @@
 Identifier: eos9q2i
 Slug: mol-jepa
-Status: In progress
+Status: Ready
 Title: Mol-JEPA A multimodal Joint Embedding Predictive Architecture for 
   Molecules
 Description: Multimodal joint-embedding predictive architecture that turns a 
@@ -35,6 +35,18 @@ Source Code: https://github.com/Boehringer-Ingelheim/mol-jepa
 License: CC-BY-4.0
 Contributor: soufianeaatab
 Incorporation Date: '2026-09-02'
+Last Packaging Date: '2026-09-04'
+Release: v1.0.0
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9q2i.zip
+DockerHub: https://hub.docker.com/r/ersiliaos/eos9q2i
+Docker Architecture:
+  - AMD64
+  - ARM64
 Model Size: 1.0
 Environment Size: 7815.0
+Image Size: 7734.34
+Computational Performance 1: 42.29
+Computational Performance 2: 35.96
+Computational Performance 3: 32.89
+Computational Performance 4: 106.24
+Computational Performance 5: 407.5
