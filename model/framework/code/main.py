@@ -12,9 +12,12 @@ output_file = sys.argv[2]
 # current file directory
 root = os.path.dirname(os.path.abspath(__file__))
 
+# Mol-JEPA snapshot (Hugging Face Flogrammer/Mol-JEPA, revision 4c912b4), stored with eosvc
+checkpoint_dir = os.path.abspath(os.path.join(root, "..", "..", "checkpoints", "mol-jepa"))
+
 # my model
 def my_model(smiles_list):
-    model = AutoModel.from_pretrained("Flogrammer/Mol-JEPA", trust_remote_code=True)
+    model = AutoModel.from_pretrained(checkpoint_dir, trust_remote_code=True, local_files_only=True)
     model.eval()
     out = model(smiles_list)
     return out.cls.cpu().numpy()
