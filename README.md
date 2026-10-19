@@ -59,7 +59,7 @@ _10 of 512 columns are shown_
 
 ### References
 - **Source Code**: [https://github.com/Boehringer-Ingelheim/mol-jepa](https://github.com/Boehringer-Ingelheim/mol-jepa)
-- **Publication**: [https://arxiv.org/abs/2608.22642](https://arxiv.org/abs/2608.22642)
+- **Publication**: [https://doi.org/10.48550/arXiv.2608.22642](https://doi.org/10.48550/arXiv.2608.22642)
 - **Publication Type:** `Preprint`
 - **Publication Year:** `2026`
 - **Ersilia Contributor:** [soufianeaatab](https://github.com/soufianeaatab)
