@@ -36,7 +36,7 @@ License: Non-commercial
 Contributor: soufianeaatab
 Incorporation Date: '2026-09-02'
 Last Packaging Date: '2026-10-23'
-Release: v1.1.0
+Release: v1.1.1
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9q2i.zip
 DockerHub: https://hub.docker.com/r/ersiliaos/eos9q2i
 Docker Architecture:
