@@ -2,7 +2,8 @@
 
 Multimodal joint-embedding predictive architecture that turns a SMILES string into a 512-dimensional embedding carrying predicted biological, phenotypic and quantum context, pretrained by modality masking over 4.69 M compounds.
 
-This model was incorporated on 2026-09-02.Last packaged on 2026-10-23.
+This model was incorporated on 2026-09-02.
+Last packaged on 2026-10-23.
 
 ## Information
 ### Identifiers
@@ -46,6 +47,7 @@ _10 of 512 columns are shown_
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos9q2i](https://hub.docker.com/r/ersiliaos/eos9q2i)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9q2i.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9q2i.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos9q2i_v1.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos9q2i_v1.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `174`
