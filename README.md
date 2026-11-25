@@ -3,7 +3,7 @@
 Multimodal joint-embedding predictive architecture that turns a SMILES string into a 512-dimensional embedding carrying predicted biological, phenotypic and quantum context, pretrained by modality masking over 4.69 M compounds.
 
 This model was incorporated on 2026-09-02.
-Last packaged on 2026-10-23.
+Last packaged on 2026-11-25.
 
 ## Information
 ### Identifiers
@@ -52,12 +52,12 @@ _10 of 512 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `174`
 - **Environment Size (Mb):** `2019`
-- **Image Size (Mb):** `2294.9`
+- **Image Size (Mb):** `713.61`
 
 **Computational Performance (seconds):**
-- 10 inputs: `36.22`
-- 100 inputs: `22.38`
-- 10000 inputs: `355.06`
+- 10 inputs: `33.78`
+- 100 inputs: `25.41`
+- 10000 inputs: `447.1`
 
 ### References
 - **Source Code**: [https://github.com/Boehringer-Ingelheim/mol-jepa](https://github.com/Boehringer-Ingelheim/mol-jepa)
