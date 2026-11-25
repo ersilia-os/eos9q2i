@@ -34,7 +34,7 @@ Source Code: https://github.com/Boehringer-Ingelheim/mol-jepa
 License: Non-commercial
 Contributor: soufianeaatab
 Incorporation Date: '2026-09-02'
-Last Packaging Date: '2026-10-23'
+Last Packaging Date: '2026-11-25'
 Release: v1.1.1
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9q2i.zip
 DockerHub: https://hub.docker.com/r/ersiliaos/eos9q2i
@@ -44,9 +44,9 @@ Docker Architecture:
 Apptainer: https://models-sif.s3.eu-north-1.amazonaws.com/eos9q2i_v1.sif
 Model Size: 174.0
 Environment Size: 2019.0
-Image Size: 2294.9
-Computational Performance 1: 36.22
-Computational Performance 2: 21.64
-Computational Performance 3: 22.38
-Computational Performance 4: 83.42
-Computational Performance 5: 355.06
+Image Size: 713.61
+Computational Performance 1: 33.78
+Computational Performance 2: 24.19
+Computational Performance 3: 25.41
+Computational Performance 4: 102.07
+Computational Performance 5: 447.1
