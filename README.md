@@ -1,4 +1,4 @@
-# Mol-JEPA A multimodal Joint Embedding Predictive Architecture for Molecules
+# Mol-JEPA: A multimodal Joint Embedding Predictive Architecture for Molecules
 
 Multimodal joint-embedding predictive architecture that turns a SMILES string into a 512-dimensional embedding carrying predicted biological, phenotypic and quantum context, pretrained by modality masking over 4.69 M compounds.
 
@@ -24,21 +24,21 @@ Last packaged on 2026-10-23.
 ### Output
 - **Output Dimension:** `512`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** The output of this template model should be interpreted like this.
+- **Interpretation:** A 512-dimensional molecular embedding, to be used as features for similarity or downstream models.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| feat_000 | float |  | embedding feature 0 |
-| feat_001 | float |  | embedding feature 1 |
-| feat_002 | float |  | embedding feature 2 |
-| feat_003 | float |  | embedding feature 3 |
-| feat_004 | float |  | embedding feature 4 |
-| feat_005 | float |  | embedding feature 5 |
-| feat_006 | float |  | embedding feature 6 |
-| feat_007 | float |  | embedding feature 7 |
-| feat_008 | float |  | embedding feature 8 |
-| feat_009 | float |  | embedding feature 9 |
+| feat_000 | float |  | Mol-JEPA embedding dimension 0 |
+| feat_001 | float |  | Mol-JEPA embedding dimension 1 |
+| feat_002 | float |  | Mol-JEPA embedding dimension 2 |
+| feat_003 | float |  | Mol-JEPA embedding dimension 3 |
+| feat_004 | float |  | Mol-JEPA embedding dimension 4 |
+| feat_005 | float |  | Mol-JEPA embedding dimension 5 |
+| feat_006 | float |  | Mol-JEPA embedding dimension 6 |
+| feat_007 | float |  | Mol-JEPA embedding dimension 7 |
+| feat_008 | float |  | Mol-JEPA embedding dimension 8 |
+| feat_009 | float |  | Mol-JEPA embedding dimension 9 |
 
 _10 of 512 columns are shown_
 ### Source and Deployment
