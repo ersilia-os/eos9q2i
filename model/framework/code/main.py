@@ -25,11 +25,14 @@ checkpoint_dir = os.path.abspath(os.path.join(root, "..", "..", "checkpoints", "
 ATOMS_PER_BATCH = 2000
 
 
-def batches(smiles_list):
+# embedding size of Mol-JEPA, used to build the NaN rows of invalid inputs
+NUM_DIMS = 512
+
+
+def batches(valid_smiles):
     batch, n_atoms = [], 0
-    for smi in smiles_list:
-        mol = Chem.MolFromSmiles(smi)
-        size = Chem.AddHs(mol).GetNumAtoms() if mol is not None else 1
+    for smi in valid_smiles:
+        size = Chem.AddHs(Chem.MolFromSmiles(smi)).GetNumAtoms()
         if batch and n_atoms + size > ATOMS_PER_BATCH:
             yield batch
             batch, n_atoms = [], 0
@@ -39,16 +42,28 @@ def batches(smiles_list):
         yield batch
 
 
+def is_valid(smi):
+    # an unparsable (or empty) SMILES would make the whole featuriser call fail
+    mol = Chem.MolFromSmiles(smi)
+    return mol is not None and mol.GetNumAtoms() > 0
+
+
 # my model
 def my_model(smiles_list):
+    """Embed the valid SMILES; invalid ones get a row of NaN so rows stay aligned with the input."""
+    results = np.full((len(smiles_list), NUM_DIMS), np.nan, dtype=np.float32)
+    valid_idx = [i for i, smi in enumerate(smiles_list) if is_valid(smi)]
+    if not valid_idx:
+        return results
     model = AutoModel.from_pretrained(checkpoint_dir, trust_remote_code=True, local_files_only=True)
     model.eval()
     outputs = []
     with torch.no_grad():
-        for batch in batches(smiles_list):
+        for batch in batches([smiles_list[i] for i in valid_idx]):
             out = model(batch)
             outputs.append(out.cls.cpu().numpy())
-    return np.concatenate(outputs, axis=0)
+    results[valid_idx] = np.concatenate(outputs, axis=0)
+    return results
 
 
 # read SMILES from .csv file, assuming one column with header
@@ -57,14 +72,10 @@ _, smiles_list = read_smiles(input_file)
 # run model
 outputs = my_model(smiles_list)
 
-#check input and output have the same lenght
-input_len = len(smiles_list)
-output_len = len(outputs)
-print(input_len, output_len)
-assert input_len == output_len
+# check input and output have the same length
+assert len(smiles_list) == len(outputs)
 
-num_dims = outputs.shape[1]
-header = [f"feat_{str(i).zfill(3)}" for i in range(num_dims)]
+header = [f"feat_{str(i).zfill(3)}" for i in range(outputs.shape[1])]
 
 # write output in a .csv file
 write_out(outputs, header, output_file, np.float32)
